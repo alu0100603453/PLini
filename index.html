@@ -10,8 +10,19 @@
      <script type="text/javascript" src="js/ini.js"></script>
   </head>
   <body>
-  
-    <input type="file" id="fileinput" />
+
+	 <div class="center">
+	 
+	<div class="title">Eduardo Jesús Díaz Dioniz</div>
+	<div class="title">Francisco José Alderete Gonzalez</div>
+	
+	<div id="drop_zone">Drop files here</div>
+	<output id="list"></output>
+	
+	<button class="buttonTable" id="generate">Generar Tabla</button>
+	<br>
+	
+	<input type="file" id="fileinput" />
     <div id="out" class="hidden">
     <table>
       <tr><th>Original</th><th>Tokens</th></tr>
@@ -24,6 +35,11 @@
         </td>
       </tr>
     </table>
+    </div>
+	<!--<div class="eddAlert" id="eddAlertError">La tabla contiene errores</div>-->
+	
+	<div class="output" id="finaltable"></div>
+	<script type="text/javascript" src="js/drag.js"></script>
     </div>
   </body>
 </html>

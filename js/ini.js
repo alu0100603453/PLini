@@ -4,8 +4,9 @@ $(document).ready(function() {
    $("#fileinput").change(calculate);
 });
 
-function calculate(evt) {
-  var f = evt.target.files[0]; 
+function calculate(f) {
+ 
+// var f = evt.target.files[0]; 
 
   if (f) {
     var r = new FileReader();

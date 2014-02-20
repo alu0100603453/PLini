@@ -15,6 +15,15 @@ window.onload = function() {
 };
 
 function calculate(evt) {
+	var resout = [];
+	var resin = [];
+	var rowin = "<% _.each(items, function(name) { %>"     +
+				"                    <td><%= name %></td>" +
+				"              <% }); %>";
+	var rowout = "<% _.each(items, function(name) { %>"     +
+				"                    <td><%= name %></td>" +
+				"              <% }); %>";
+
 	var f = evt.target.files[0];
 		
 	if (f) {
@@ -26,12 +35,23 @@ function calculate(evt) {
 			var pretty = tokensToString(tokens);
       
 			out.className = 'unhidden';
-			texttoparse.innerHTML = contents;
-			finaloutput.innerHTML = pretty;
-	  
+			
+			
+			resin.push(contents);
+			resout.push(pretty);
+			
+			resin.push("<tr>"+_.template(rowin, {items : resin})+"</tr>");
+			resout.push("<tr>"+_.template(rowout, {items : resout})+"</tr>");
+			
+			resin.push('</table>');
+			resout.push('</table>');
+			
+			texttoparse.innerHTML = resin.join('');
+			finaloutput.innerHTML = resout.join('');
+			
 			if (window.localStorage){
-				localStorage.filein  = contents;
-				localStorage.fileout  = pretty;
+				localStorage.filein  = resin.join('');;
+				localStorage.fileout  = resout.join('');
 			}
 		}
 		r.readAsText(f);

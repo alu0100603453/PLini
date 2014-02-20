@@ -61,12 +61,12 @@ body{
 .title{
   text-align: center;
   color: rgb(86, 86, 86);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-top: 20px;
   text-transform: lowercase;
   cursor: default;
   font-family: 'Pompiere', cursive;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
 }
 #original{

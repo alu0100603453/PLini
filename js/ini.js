@@ -1,12 +1,14 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 
 $(document).ready(function() {
-   $("#fileinput").change(calculate);
+	$("#input").click(function() {
+	   $('#fileinput').trigger('click');   
+	});
+	$("#fileinput").change(calculate);
 });
-
-function calculate(f) {
+function calculate(evt) {
  
-// var f = evt.target.files[0]; 
+ var f = evt.target.files[0]; 
 
   if (f) {
     var r = new FileReader();

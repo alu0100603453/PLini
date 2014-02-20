@@ -18,7 +18,7 @@ function calculate(evt) {
 	var resout = [];
 	var resin = [];
 	var rowin = "<% _.each(items, function(name) { %>"     +
-				"                    <td><%= name %></td>" +
+				"                    <%= name %>" +
 				"              <% }); %>";
 	var rowout = "<% _.each(items, function(name) { %>"     +
 				"                    <td><%= name %></td>" +
@@ -40,10 +40,9 @@ function calculate(evt) {
 			resin.push(contents);
 			resout.push(pretty);
 			
-			resin.push("<tr>"+_.template(rowin, {items : resin})+"</tr>");
+			resin.push(_.template(rowin, {items : resin}));
 			resout.push("<tr>"+_.template(rowout, {items : resout})+"</tr>");
 			
-			resin.push('</table>');
 			resout.push('</table>');
 			
 			texttoparse.innerHTML = resin.join('');
@@ -97,7 +96,6 @@ function lexer(input) {
       out.push({ type: 'comments', match: m });
     }
     else if (m = nameEqualValue.exec(input)) {
-      /* while (match casa con /\\$/) concatena la siguiente línea */
       input = input.substr(m.index+m[0].length);
       out.push({ type: 'nameEqualValue', match: m });
     }

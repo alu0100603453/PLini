@@ -6,26 +6,38 @@ $(document).ready(function() {
 	});
 	$("#fileinput").change(calculate);
 });
-function calculate(evt) {
- 
- var f = evt.target.files[0]; 
+window.onload = function() {
+		if (window.localStorage && localStorage.fileout && localStorage.filein) {
+			out.className = 'unhidden';
+			texttoparse.innerHTML = localStorage.filein;
+			finaloutput.innerHTML = localStorage.fileout;
+		}
+};
 
-  if (f) {
-    var r = new FileReader();
-    r.onload = function(e) { 
-      var contents = e.target.result;
+function calculate(evt) {
+	var f = evt.target.files[0];
+		
+	if (f) {
+		var r = new FileReader();
+		r.onload = function(e) {
+			var contents = e.target.result;
       
-      var tokens = lexer(contents);
-      var pretty = tokensToString(tokens);
+			var tokens = lexer(contents);
+			var pretty = tokensToString(tokens);
       
-      out.className = 'unhidden';
-      initialinput.innerHTML = contents;
-      finaloutput.innerHTML = pretty;
-    }
-    r.readAsText(f);
-  } else { 
-    alert("Failed to load file");
-  }
+			out.className = 'unhidden';
+			texttoparse.innerHTML = contents;
+			finaloutput.innerHTML = pretty;
+	  
+			if (window.localStorage){
+				localStorage.filein  = contents;
+				localStorage.fileout  = pretty;
+			}
+		}
+		r.readAsText(f);
+	}else { 
+		alert("Failed to load file");
+	}
 }
 
 var temp = '<li> <span class = "<%= token.type %>"> <%= match %> </span>\n';

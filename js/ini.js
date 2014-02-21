@@ -13,7 +13,6 @@ window.onload = function() {
 			finaloutput.innerHTML = localStorage.fileout;
 		}
 };
-
 function calculate(evt) {
 	var resout = [];
 	var resin = [];

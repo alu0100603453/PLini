@@ -1,8 +1,9 @@
 PLini
 =====
-##PrÃ¡ctica de procesadores de lenguaje: Ficheros.ini
+##Práctica de procesadores de lenguaje: Ficheros.ini
++ Weblink: http://alu0100603453.github.io/PLini
 ##Autores:
-+ Francisco JosÃ© Alderete GonzÃ¡lez: https://github.com/alu0100603453
++ Francisco José Alderete González: https://github.com/alu0100603453
 + Eduardo Jesus Diaz Dioniz: https://github.com/alu0100789683
 
 ##Finalidad:

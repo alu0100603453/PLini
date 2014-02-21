@@ -1,0 +1,132 @@
+
+.thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+
+h1            { text-align: center; font-size: x-large; }
+th, td        { vertical-align: top; text-align: left; }   
+/* #finaltable  * { color: white; background-color: black; }   */
+
+/* #finaltable table { border-collapse:collapse; } */
+/* #finaltable table, td { border:1px solid white; } */
+#finaltable:hover td { background-color: blue; } 
+tr:nth-child(odd)    { background-color:#eee; }
+tr:nth-child(even)    { background-color:#00FF66; }
+input        { text-align: right;  border: none;       }     /* Align input to the right  */
+textarea     { border: outset; border-color: white;       }                        
+table        { border: inset; border-color: white; }
+.hidden      { display: none; }
+.unhidden    { display: block; }
+table.center { margin-left:auto; margin-right:auto; }
+#result      { border-color: red; }
+tr.error       { background-color: red; }
+pre.output   { background-color: white; }
+span.repeated { background-color: red }
+span.header { background-color: blue }
+span.comments { background-color: orange }
+span.blanks { background-color: green }
+span.nameEqualValue { background-color: cyan }
+span.error { background-color: red }
+
+body{
+  background:#3d3d3d;
+  font-family: 'Duru Sans', sans-serif;
+}
+#drop_zone{
+	width:510px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #2E3134;
+    border-color: rgba(0, 0, 0, 0);
+    border-image: url("../img/backgroundUWorld0120.png") 25 25 25 25 repeat repeat;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 20px;
+    color: #7F858A;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 40px 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.center{
+  margin:0 auto;
+  width:650px;
+}
+.title{
+  text-align: center;
+  color: rgb(86, 86, 86);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: lowercase;
+  cursor: default;
+  font-family: 'Pompiere', cursive;
+  font-size: 2em;
+  font-weight: bold;
+}
+#original{
+	resize: none;
+	padding: 10px;
+	width:628px;
+	height:150px;
+	background:#e5e5e5;
+}
+#finaltable{
+	display:none;
+	overflow: scroll;
+	overflow-x: hidden;
+	height:200px;
+	margin-top: 20px;
+	border:2px solid #c5c5c5;
+	background: none repeat scroll 0 0 #E5E5E5;
+}
+.buttonTable {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:41px;
+	line-height:41px;
+	width:150px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #7cacde;
+}
+.buttonTable:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.buttonTable:active {
+	position:relative;
+	top:1px;
+}
+

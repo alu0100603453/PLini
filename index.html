@@ -1,0 +1,46 @@
+<html>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>Ficheros INI</title>
+     <link href="css/global.css" rel="stylesheet" type="text/css">
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+     <script type="text/javascript" src="js/ini.js"></script>
+  </head>
+  <body>
+
+	 <div class="center">
+	 
+	<div class="title">Eduardo Jesús Díaz Dioniz</div>
+	<div class="title">Francisco José Alderete Gonzalez</div>
+	
+	<div id="drop_zone">
+		Drop files here
+		</br>
+		<button class="buttonTable" id="input">Explorar</button>
+	
+	</div>
+	<input type="file" id="fileinput" style="display:none;" />
+	
+	
+	<br>
+	<div id='texttoparse'></div>
+    <div id="out" class="hidden">
+    <table>
+      <tr><th>Tokens</th></tr>
+      <tr>
+        <td>
+          <pre class="output" id="finaloutput"></pre>
+        </td>
+      </tr>
+    </table>
+    </div>
+	<!--<div class="eddAlert" id="eddAlertError">La tabla contiene errores</div>-->
+	
+	<div class="output" id="finaltable"></div>
+	<script type="text/javascript" src="js/drag.js"></script>
+    </div>
+  </body>
+</html>
